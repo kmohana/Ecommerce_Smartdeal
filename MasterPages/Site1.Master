@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Ecommerce_Smartdeal.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset ="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smartdeal Online shopping site - Electronics,Daily essentials..</title>
+    <link rel = "icon" href = "/images/Smar Deals - small.PNG" type = "image/x-icon"/>
+    <link href="../Stylesheets/Main.css" rel="stylesheet" type="text/css" />
+    <style type = "text/css">
+        #nav1 {
+            height: 106px;
+        }
+        .auto-style1 {
+            height: 95px;
+            width: 273px;
+        }
+      
+        .auto-style6 {
+            font-size: large;
+        }
+      
+        .auto-style7 {
+            float: right;
+            font-size: large;
+            margin-top: 0px;
+        }
+      
+        .auto-style8 {
+            width: 79%;
+            height: 1019px;
+        }
+      
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+                                   
+        <div id ="pagewrapper">
+                    <div id ="header">
+                         <img alt="smart Deals" class="auto-style1" src="/images/Smart-Deals.ico" />
+                         <asp:Button ID="Btn_Logout" runat="server"  BackColor="#993300" BorderColor="White" ForeColor="White" Height="26px" Text="Log out" Width="128px" Style ="float:right;" OnClick="Btn_Logout_Click" />
+                         <asp:Label ID="lbl_user" runat="server" CssClass="auto-style7" Width="151px" Height="22px"></asp:Label>
+                    </div>
+                    
+           
+                    <div id ="Menu">
+                        <asp:ContentPlaceHolder ID="Menu_placeholder" runat="server">
+                            <div>
+                                <ul>
+                                    <li><a href="index.aspx">Home</a></li>
+                                    <li><a href ="contactus.aspx">Contact Us</a></li>
+                                    <li style="float:right;"><a href="Login.aspx">Sign up</a> </li>
+                                    <li style="float:right;"><a class ="active" href="ViewCart.aspx">Cart</a></li>
+                                </ul>
+                            </div>
+
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    
+                   <div id ="body">
+
+                            <div id ="Main">
+                                <div class="auto-style8">
+                                <asp:ContentPlaceHolder ID="Main_placeholder" runat="server"></asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+                
+                    
+
+                            <div id ="leftpanel">
+                                <h3 class="auto-style6"><strong>PRODUCT CATEGORY</strong></h3>
+                                <uc1:MenuControl ID="MenuControl1" runat="server" />
+                            </div>
+                
+                            <div id ="footer"> 
+                                Copyright &copy; 2021 Chennai IN ,Inc. All rights reserved. <a href ="#">Terms of use</a> | <a href ="#">Privacy</a>
+                            </div>    
+                   </div>
+         
+            </div>
+    </form>
+</body>
+</html> 

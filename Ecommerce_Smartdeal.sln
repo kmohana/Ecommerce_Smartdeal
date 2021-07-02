@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce_Smartdeal", "Ecommerce_Smartdeal.csproj", "{99A5A080-D003-4288-A158-8ACE377B18A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99A5A080-D003-4288-A158-8ACE377B18A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A5A080-D003-4288-A158-8ACE377B18A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A5A080-D003-4288-A158-8ACE377B18A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A5A080-D003-4288-A158-8ACE377B18A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBA2B61F-CE53-4A47-B400-5A6A4AE9075C}
+	EndGlobalSection
+EndGlobal

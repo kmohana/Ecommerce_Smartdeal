@@ -1,0 +1,20 @@
+﻿input:hover {
+    box-shadow: 0 0 5px 1px blue;
+}
+
+label.error.fail-alert {
+    line-height: 1;
+    padding: 2px 0 6px 6px;
+    color: red;
+}
+
+input.valid.success-alert {
+    border: 2px solid #4CAF50;
+    color: green;
+}
+
+.reset,
+.new_cont {
+    float: left;
+    width: 100%;
+}
