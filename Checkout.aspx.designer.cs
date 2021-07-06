@@ -51,6 +51,15 @@ namespace Ecommerce_Smartdeal
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
+        /// RdoOffers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList RdoOffers;
+
+        /// <summary>
         /// lbl_total control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace Ecommerce_Smartdeal
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label total;
+
+        /// <summary>
+        /// LblOff control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblOff;
 
         /// <summary>
         /// btn_placeorder control.

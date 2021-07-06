@@ -3,9 +3,9 @@
 
     <table style="width: 58%;">
         <tr>
-            <td style="text-align: right">
+            <td style="text-align: left">
                 <div style="text-align: center">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ShowFooter="True" Height="114px" style="margin-left: 0px; margin-top: 65px;" Width="563px">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating"  ShowFooter="True" Height="114px" style="margin-left: 0px; margin-top: 65px;" Width="563px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:TemplateField HeaderText="Product_id">
@@ -100,8 +100,18 @@
                         <asp:Parameter Name="original_price" Type="Decimal" />
                     </UpdateParameters>
                 </asp:SqlDataSource>
+                <table style="width:100%;">
+                    <tr>
+                        <td style="height: 26px">
                 <asp:Label ID="Label6" runat="server"></asp:Label>
-     <asp:Button ID="btn_checkout" runat="server" Height="33px"  Text="Checkout" Width="207px" style="margin-left: 157px" OnClick="btn_checkout_Click" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 44px">
+     <asp:Button ID="Btn_checkout" runat="server" Height="40px"  Text="Checkout" Width="243px"  OnClick="Btn_checkout_Click" BackColor="#99CCFF" ForeColor="Black" />
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
     </table>

@@ -18,9 +18,6 @@ namespace Ecommerce_Smartdeal
             }
         }
 
-        protected void dlMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

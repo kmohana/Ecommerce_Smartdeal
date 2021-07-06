@@ -42,12 +42,12 @@ namespace Ecommerce_Smartdeal
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// btn_checkout control.
+        /// Btn_checkout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_checkout;
+        protected global::System.Web.UI.WebControls.Button Btn_checkout;
     }
 }

@@ -4,10 +4,10 @@
 }
 
 #Menu {
-    
     width: 990px;
     height: 40px;
-    top : 50px;
+    top: 50px;
+    
 }
 
 #Main {
@@ -74,6 +74,9 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: brown;
 }
 
 ul {
@@ -81,8 +84,10 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #834333;
+    background-color: brown;
     height: 40px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 
@@ -116,10 +121,10 @@ li a:hover, .dropdown:hover .dropbtn {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: small;
-    height : 30px;
+    height: 30px;
     color: white;
     text-align: center;
-    background-color: #834333;
+    background-color: brown;
 }
 
 #lbl_username {

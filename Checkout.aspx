@@ -23,7 +23,7 @@
                 <asp:SessionParameter Name="username" SessionField="id" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="cart_id" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" style="margin-top: 13px" Width="618px" Height="37px">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="cart_id"  AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" style="margin-top: 13px" Width="618px" Height="37px">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="product_name" HeaderText="product_name" SortExpression="product_name" />
@@ -47,18 +47,39 @@
             <asp:SessionParameter Name="session_id" SessionField="id" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <table style="width:73%;">
+    <table style="width:88%;">
         <tr>
-            <td style="text-align: right; height: 32px; width: 230px;">
-                <h4>
-                    <asp:Label ID="lbl_total" runat="server" Text="Order Total ="></asp:Label>
-&nbsp;<asp:Label ID="total" runat="server" style="color: #000000"></asp:Label>
-                </h4>
+            <td style="text-align: left; height: 32px; width: 619px;">
+                <strong><em><span class="auto-style6">
+                <br />
+                Save with below&nbsp; Offers :<br />
+                </span></em></strong><br />
+                <asp:RadioButtonList ID="RdoOffers" runat="server" AutoPostBack="True" CssClass="auto-style6" >
+                    <asp:ListItem>Credit Card 10%</asp:ListItem>
+                    <asp:ListItem>UPI offer 3%</asp:ListItem>
+                    <asp:ListItem>Get 5% discount on orders above $1000</asp:ListItem>
+                </asp:RadioButtonList>
+                <br />
             </td>
         </tr>
         <tr>
-            <td style="width: 100%; text-align: right;">
-               <asp:Button ID="btn_placeorder" runat="server" OnClick="btn_placeorder_Click" Text="Place Order" Height="33px" Width="181px" />
+            <td style="text-align: left; height: 28px; width: 619px;">
+                <strong>
+                    <asp:Label ID="lbl_total" runat="server" Text="Order Total =" CssClass="auto-style6"></asp:Label>
+                    </strong>
+                    <span class="auto-style6"><strong>&nbsp;$</strong></span><strong><asp:Label ID="total" runat="server" style="color: #000000" CssClass="auto-style6"></asp:Label>
+                </strong>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 619px; text-align: left; height: 29px;">
+                <strong><span class="auto-style6">Order Total after discount = $</span><asp:Label ID="LblOff" runat="server" CssClass="auto-style6"></asp:Label>
+                </strong>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 619px; text-align: left;">
+               <asp:Button ID="btn_placeorder" runat="server" OnClick="Btn_placeorder_Click" Text="Place Order" Height="47px" Width="247px" BackColor="#006600" ForeColor="White" />
             </td>
         </tr>
     </table>

@@ -13,6 +13,8 @@ namespace Ecommerce_Smartdeal
 {
     public partial class ViewCart : System.Web.UI.Page
     {
+        String mycon = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
            
@@ -28,12 +30,12 @@ namespace Ecommerce_Smartdeal
                 if (GridView1.Rows.Count != 0)
                 {
 
-                    btn_checkout.Visible = true;
+                    Btn_checkout.Visible = true;
                     Label6.Visible = true;
                 }
                 else
                 {
-                    btn_checkout.Visible = false;
+                    Btn_checkout.Visible = false;
                     Label6.Visible = false;
                 }
             }
@@ -44,15 +46,6 @@ namespace Ecommerce_Smartdeal
         }
         
 
-        protected void dlViewCart_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
@@ -78,20 +71,33 @@ namespace Ecommerce_Smartdeal
             TextBox description = GridView1.Rows[e.RowIndex].FindControl("TextBox2") as TextBox;
             TextBox price = GridView1.Rows[e.RowIndex].FindControl("TextBox3") as TextBox;
             TextBox quantity = GridView1.Rows[e.RowIndex].FindControl("TextBox1") as TextBox;
-
-            String mycon = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
-            string updatedata = "update shopping_cart set product_id ='" + product_id.Text  + "',quantity='" + quantity.Text + "' where session_id ='" + Session["id"] + "' and product_id = '" + product_id.Text+"'";
             SqlConnection con1 = new SqlConnection(mycon);
-            con1.Open();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = updatedata;
-            cmd.Connection = con1;
-            cmd.ExecuteNonQuery();
-            Label6.Text = "Cart has been updated  ";
-            GridView1.EditIndex = -1;
-            SqlDataSource1.DataBind();
-            GridView1.DataSource = SqlDataSource1;
-            GridView1.DataBind();
+
+            try
+            {
+                string updatedata = "update shopping_cart set product_id ='" + product_id.Text + "',quantity='" + quantity.Text + "' where session_id ='" + Session["id"] + "' and product_id = '" + product_id.Text + "'";
+                con1.Open();
+                
+                cmd.CommandText = updatedata;
+                cmd.Connection = con1;
+                cmd.ExecuteNonQuery();
+                Label6.Text = "Cart has been updated  ";
+                GridView1.EditIndex = -1;
+                SqlDataSource1.DataBind();
+                GridView1.DataSource = SqlDataSource1;
+                GridView1.DataBind();
+            }
+
+            catch(Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
+            finally
+            {
+                cmd.Dispose();
+                con1.Close();
+            }
 
 
 
@@ -101,28 +107,42 @@ namespace Ecommerce_Smartdeal
         {
 
             Label product_id = GridView1.Rows[e.RowIndex].FindControl("Label1") as Label;
-            
-
-            String mycon = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
-            string updatedata = "delete from shopping_cart  where product_id ='" + product_id.Text + "' and session_id = '" + Session["id"] + "'";
             SqlConnection con1 = new SqlConnection(mycon);
-            con1.Open();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = updatedata;
-            cmd.Connection = con1;
-            cmd.ExecuteNonQuery();
-            Label6.Text = "Item has been deleted Successfully";
-            GridView1.EditIndex = -1;
-            SqlDataSource1.DataBind();
-            GridView1.DataSource = SqlDataSource1;
-            GridView1.DataBind();
+
+            try
+            {
+
+                string updatedata = "delete from shopping_cart  where product_id ='" + product_id.Text + "' and session_id = '" + Session["id"] + "'";
+
+                con1.Open();
+                
+                cmd.CommandText = updatedata;
+                cmd.Connection = con1;
+                cmd.ExecuteNonQuery();
+                Label6.Text = "Item has been deleted Successfully";
+                GridView1.EditIndex = -1;
+                SqlDataSource1.DataBind();
+                GridView1.DataSource = SqlDataSource1;
+                GridView1.DataBind();
+
+            }
+            catch(Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
+            finally
+            {
+                cmd.Dispose();
+                con1.Close();
+            }
 
         }
 
 
 
 
-        protected void btn_checkout_Click(object sender, EventArgs e)
+        protected void Btn_checkout_Click(object sender, EventArgs e)
         {
             string s = Convert.ToString(Session["id"]);
             Response.Redirect("Checkout.aspx?CartID=" + s);

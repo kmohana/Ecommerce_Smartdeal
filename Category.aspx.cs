@@ -17,15 +17,13 @@ namespace Ecommerce_Smartdeal
   
                 if(id != null)
                 {
-                    dlCategory.DataSource = DataAccess.SelectQuery("select * from product_details where category_id =" + Request.QueryString["category_id"]);
+                   
+                    dlCategory.DataSource = DataAccess.SelectQuery("select * from product_details where category_id =" + id);
                     dlCategory.DataBind();
                 }
             }
         }
 
-        protected void dlCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

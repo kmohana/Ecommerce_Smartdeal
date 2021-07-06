@@ -4,24 +4,27 @@
         
         display: inline-block;
         padding: 2px;
-        color: #FFFFFF;
         font-style: oblique;
         text-align: center;
         padding: 14px 16px;
-        text-decoration:none;
-    
+        background-color : #834333;
     }
+
     .auto-style1 {
         text-align: center;
     }
+    .auto-style2 {
+        font-weight: normal;
+    }
 </style>
 <div class="auto-style1">
-<asp:DataList ID="dlMenu" runat="server" OnSelectedIndexChanged="dlMenu_SelectedIndexChanged" Width="220px" BorderColor="Maroon" BorderWidth="2px" CellPadding="1" CellSpacing="-1" Font-Bold="False" Font-Italic="False" Font-color ="White" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" ForeColor="White" GridLines="Both">
+    <em>
+<asp:DataList ID="dlMenu" runat="server" Width="220px" BorderColor="White" BorderWidth="2px" CellPadding="1" CellSpacing="-1" Font-Bold="False" Font-Italic="False" Font-color ="White" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" ForeColor="White" GridLines="Both" BackColor="Brown">
     <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" ForeColor="White" />
     <ItemTemplate>
-        <h4><strong>
-            <asp:HyperLink ID="HyperLink1" runat="server"  NavigateUrl='<%# "Category.aspx?category_id="+ Eval("category_id") %>' Text='<%# Eval("category_name") %>' Font-Underline="False"></asp:HyperLink>
-            </strong></h4>
+        <h4><em>
+            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style2" Font-Underline="False" ForeColor="White" NavigateUrl='<%# "Category.aspx?category_id="+ Eval("category_id") %>' Text='<%# Eval("category_name") %>'></asp:HyperLink>
+            </em></h4>
        
     </ItemTemplate>
 </asp:DataList>
