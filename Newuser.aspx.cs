@@ -18,36 +18,7 @@ namespace Ecommerce_Smartdeal
         {
 
         }
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Female_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        protected void New_Pwd_TextChanged1(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void New_Pwd_TextChanged2(object sender, EventArgs e)
-        {
-
-        }
-
+       
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -68,11 +39,6 @@ namespace Ecommerce_Smartdeal
                 Response.Write(ex.ToString());
             }
 
-
-        }
-
-        protected void addr_TextChanged(object sender, EventArgs e)
-        {
 
         }
 

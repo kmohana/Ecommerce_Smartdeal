@@ -134,7 +134,7 @@
                     Password</th>
                 <td>
                    
-                    <asp:TextBox ID="password"  name ="new_pwd1" TextMode="Password"  placeholder ="Set Password" runat="server" CssClass="auto-style3" OnTextChanged="New_Pwd_TextChanged1" Width="378px" MaxLength="10" ValidationGroup="SignInValidate"></asp:TextBox>
+                    <asp:TextBox ID="password"  name ="new_pwd1" TextMode="Password"  placeholder ="Set Password" runat="server" CssClass="auto-style3"  Width="378px" MaxLength="10" ValidationGroup="SignInValidate"></asp:TextBox>
                 </td>
                 </tr>
                 <tr>
@@ -143,7 +143,7 @@
                 <td>
                    
                     <br />
-                    <asp:TextBox ID="conf_password" name ="new_pwd1" TextMode="Password" placeholder ="Confirm your Password" runat="server" CssClass="auto-style3" MaxLength="10" OnTextChanged="New_Pwd_TextChanged2" Width="380px"></asp:TextBox>
+                    <asp:TextBox ID="conf_password" name ="new_pwd1" TextMode="Password" placeholder ="Confirm your Password" runat="server" CssClass="auto-style3" MaxLength="10" Width="380px"></asp:TextBox>
                 </td>
                 </tr>
 
@@ -162,7 +162,7 @@
                     Address</th>
                 <td>
                     
-                    <asp:TextBox ID="addr" name ="addr" runat="server" placeholder ="Enter complete Address" Height="82px" Width="380px" MaxLength="100" OnTextChanged="addr_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="addr" name ="addr" runat="server" placeholder ="Enter complete Address" Height="82px" Width="380px" MaxLength="100" ></asp:TextBox>
                 </td>
                 </tr>
                 <tr>
